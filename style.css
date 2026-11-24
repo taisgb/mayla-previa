@@ -29,3 +29,25 @@
 .social-icon{display:block;width:20px;height:20px;flex:0 0 20px;overflow:visible;color:inherit}.btn{border-radius:999px;gap:10px}.btn .social-label,.text-link .social-label,.footer-links .social-label{font:inherit;line-height:inherit}.btn.small .social-icon{width:17px;height:17px;flex-basis:17px}.text-link{border:1px solid #a83f2540;border-radius:999px;padding:10px 17px;min-height:43px;max-width:100%;gap:9px;text-align:left;line-height:1.45;transition:background .2s,border-color .2s}.text-link:hover{background:#a83f2509;border-color:var(--clay)}.text-link .social-icon{width:17px;height:17px;flex-basis:17px}.menu{border-radius:999px}.floating{border-radius:999px}.floating .social-icon{width:29px;height:29px;stroke:none;fill:currentColor}.footer-links{gap:9px}.footer-links a{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;font-size:12px;line-height:1.3;min-height:38px}.footer-links a:hover{border-color:var(--clay)}.footer-links .social-icon{width:17px;height:17px;flex-basis:17px}.instagram{border:1px solid var(--line);border-radius:999px;padding:17px 24px;gap:15px;max-width:100%;transition:background .2s,border-color .2s}.instagram:hover{background:var(--cream);border-color:var(--clay)}.instagram .social-icon{width:30px;height:30px;flex-basis:30px;stroke:none;fill:none}.video-cover .video-play{cursor:pointer;border:0;margin-top:7px;border-radius:999px}.video-cover .video-play .social-icon{width:22px;height:22px;flex-basis:22px}.portrait-placeholder{background:var(--peach)}.therapy-composition{aspect-ratio:1/1.05;display:flex;align-items:flex-end;position:relative;isolation:isolate;overflow:hidden;border-radius:38% 38% 12px 70px / 25% 25% 12px 70px;background:#f2c8b5;padding:clamp(25px,4vw,57px);color:var(--dark-clay)}.therapy-composition::before{content:'';position:absolute;z-index:-1;width:75%;aspect-ratio:1;top:-15%;right:-14%;border-radius:50%;background:#fae8d7}.therapy-curve{position:absolute;z-index:-1;width:92%;aspect-ratio:1;border:1px solid #a83f2555;border-radius:50%;pointer-events:none}.curve-one{top:-23%;left:-19%}.curve-two{bottom:-48%;right:-10%;background:#e7a58f66;border-color:#a83f2533}.therapy-composition-copy{display:grid;gap:17px;max-width:100%}.composition-kicker{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.composition-title{font:400 clamp(24px,3.3vw,49px)/1.12 var(--serif);letter-spacing:-.055em}.composition-title i{font-weight:400}.composition-line{width:38px;height:1px;background:var(--clay)}
 @media(max-width:850px){.therapy-composition{aspect-ratio:1.38;border-radius:60px 65px 8px 32px;padding:26px}.composition-title{font-size:clamp(24px,5vw,38px)}.therapy-composition-copy{gap:10px}.instagram{padding:14px 19px}.footer-links a{min-height:44px}.actions{gap:12px}.video-cover{gap:10px}.video-cover .video-play{padding:12px 19px;min-height:44px}}
 @media(max-width:365px){.therapy-composition{padding:19px}.composition-title{font-size:23px}.instagram{padding:13px 15px}.video-cover{padding:12px}.video-cover strong{font-size:22px}}
+
+/* WhatsApp: ancorado à janela durante toda a rolagem. */
+body > a.floating {
+  position: fixed;
+  inset: auto max(20px, env(safe-area-inset-right, 0px)) max(20px, env(safe-area-inset-bottom, 0px)) auto;
+  z-index: 1000;
+  width: 55px;
+  height: 55px;
+  border-radius: 999px;
+  margin: 0;
+  transform: none;
+  touch-action: manipulation;
+}
+body > a.floating:focus-visible { outline: 2px solid var(--dark-clay); outline-offset: 4px; }
+@media (max-width: 850px) {
+  body > a.floating {
+    right: max(16px, env(safe-area-inset-right, 0px));
+    bottom: max(16px, env(safe-area-inset-bottom, 0px));
+    width: 52px;
+    height: 52px;
+  }
+}
